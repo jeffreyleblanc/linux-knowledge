@@ -24,6 +24,6 @@ $ git push -u github master
 
 If you are trying to use a repo with existing commits that use an email that is not tagged as
 public on github, you can change past commit emails. I haven't gotten to work clearly yet, but
-starting points can reference (this stackoveflow)[https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/25815116#25815116]
+starting points can reference [this stackoverflow](https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/25815116#25815116)
 
 
