@@ -18,12 +18,12 @@ $ gpg --full-generate-key
 $ gpg --list-secret-key --with-fingerprint
 
 # Intialize pass
-# Note $FINGERPRINT is last 8 char from above
-$ pass init $FINGERPRINT
+# Note <fingerprint> is last 8 char from above
+$ pass init <fingerprint>
 $ pass git init
 ```
 
-Note that below <ppath> is something like `sites/amazon/pw`
+Note that below `<ppath>` is something like `sites/amazon/pw`
 
 Listing and viewing:
 
