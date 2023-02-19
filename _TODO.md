@@ -110,6 +110,7 @@ wm--  (for window manager, graphics?)
     * chown, chgrp, chmod
     * sudo and su patterns
 * process examination
+    * top and htop
     * signal processes
     * kill/killall
     * /proc tree
