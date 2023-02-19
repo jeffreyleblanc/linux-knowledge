@@ -2,6 +2,25 @@
 
 There is always tons to do, but initial things to add/update:
 
+## Strucure
+
+The goal is not have an overly complicated structure, but perhaps a pattern of:
+
+`<category>--<topic>`, e.g. `networking--nmcli.md` works.
+
+So what categories are there?
+
+```
+bash--
+networking--
+filesys--
+users--
+core--
+wm--  (for window manager, graphics?)
+```
+
+## Topics
+
 * `.bashrc` and patterns of setup/split of subfiles
     * include `source` as well
 * tmux
@@ -135,6 +154,11 @@ There is always tons to do, but initial things to add/update:
     * date time
     * uname
     * etc/os-release
+* processes
+    * `type` resolution
+    * PATH
+    * /usr/bin, /usr/sbin, /usr/local/bin
+    * manually installing programs and symlinking
 
 More misc topics/programs:
 
