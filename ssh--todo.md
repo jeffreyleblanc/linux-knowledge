@@ -11,6 +11,7 @@
             * `known_hosts`
             * keypairs
         * `ssh-keygen`, `ssh-copy-id`, `ssh-agent`, `ssh-add`
+        * file permissions you should have on the above
     * server
         * `ssh` and `sshd` systemd units
         * `/etc/ssh`

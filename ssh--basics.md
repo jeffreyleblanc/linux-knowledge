@@ -35,4 +35,21 @@ s$ exit
 # Now try logging back in and it should use your keypair
 ```
 
+## The client config file
+
+You can make a `~/.ssh/config` file that will specify details on how to connect to various hosts. Some basic options look like:
+
+```
+# You can have IP, hostnames, and fqdn in the Host section
+Host 123.123.89.89 my-site-hostname
+    User siteadmin
+    IdentityFile ~/.ssh/my-site
+    Port 743
+
+Host another-hostname
+    User joe
+    IdentityFile ~/.ssh/another-site
+```
+
+
 
