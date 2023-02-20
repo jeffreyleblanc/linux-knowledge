@@ -2,7 +2,7 @@
 
 This shows how to enable a vnc server on a machine and then connect to it.
 
-This is a first pass, and there are probably tweaks for ease of use and security that can be made.
+This is a first pass, and there are probably tweaks for ease of use and security that can be made. For example I don't discuss server firewall/encryption options at the moment.
 
 
 ## Setting up on the Source Machine
@@ -101,15 +101,30 @@ $ xtigervncviewer <hostname>:5901 -passwordFile _vnc_pw -SecurityTypes VncAuth
 
 Note that in this setup, each viewer is to the same vnc session.
 
-To use an ssh tunnel:
+## Using an SSH Tunnel
+
+To use an ssh tunnel, on the client machine run:
 
 ```
 $ ssh -L 5901:127.0.0.1:5901 -C -N -l <MY_USER> <SERVER_IP>
+#> Just leave this running while you are using it.
+#> Likely no output.
 ```
 
-and then you connect on localhost:5901
+The flags basically mean:
 
-Note, you'll want diff local ports if multiple connections.
+    -L  specifies port forwarding rules
+    -C  compresses data
+    -l  specifies the login name on the remote machine
+    -N  suppresses executing a remote command, used when forwarding ports
+
+Then you can connect at `localhost:5901` (for `remote-viewer` specifically `vnc://localhost:5901`).
+
+Note, you'll want different local ports if multiple connections.
+
+## Misc Notes on Interacting in the Viewer
+
+I've noticed that if you have another graphical session (e.g. I've got swaywm running on same machine), I get errors if I'm trying to run firefox in both the physical and vnc sessions.
 
 
 ## Interacting with the VNC Session over SSH
