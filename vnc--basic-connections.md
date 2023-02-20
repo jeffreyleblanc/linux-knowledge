@@ -2,8 +2,14 @@
 
 This shows how to enable a vnc server on a machine and then connect to it.
 
-This is a first pass, and there are probably tweaks for ease of use and security that can be made. For example I don't discuss server firewall/encryption options at the moment.
+This is a first pass, and there are probably tweaks for ease of use and security that can be made. Topics to cover:
 
+* Installation of `dbus-x11` on the server side
+* Direct running of `vncserver` without need for systemd units
+* Firewall rules on the server side
+* Alternative servers that might include:
+    * Better password/auth options
+    * Socket encryption out of the box
 
 ## Setting up on the Source Machine
 
@@ -106,7 +112,7 @@ Note that in this setup, each viewer is to the same vnc session.
 To use an ssh tunnel, on the client machine run:
 
 ```
-$ ssh -L 5901:127.0.0.1:5901 -C -N -l <MY_USER> <SERVER_IP>
+$ ssh -L 5901:127.0.0.1:5901 -C -N -l <MY_USER> <SERVER_ADDR>
 #> Just leave this running while you are using it.
 #> Likely no output.
 ```
