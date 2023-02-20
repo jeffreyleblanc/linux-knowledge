@@ -10,18 +10,22 @@ This is a first pass, and there are probably tweaks for ease of use and security
 Install dependencies. Note we are going to use xfce for the vnc window manager. Current version is 4, but check before installing.
 
 ```sh
-$ sudo apt-get install \
-tightvncserver \
-tigervnc-common \
-xfce4 xfce4-goodies
+$ sudo apt-get install tightvncserver
+$ sudo apt-get install xfce4 xfce4-goodies
+# likely don't need: `tigervnc-common`
 ```
+
+> if asked about window manager, can use gdm
 
 Now we are going to make a password file:
 
 ```sh
-$ mkdir $HOME/.vnc
-$ echo $$PW | vncpasswd -f > ~/.vnc/passwd
-$ chmod 600 $HOME/.vnc/passwd
+$ mkdir ~/.vnc
+# For a modicum of security, add a ' ' before next command
+# so it's not logged to bash history
+$  echo <password> | vncpasswd -f > ~/.vnc/passwd
+#> Insanely, this should be exactly 8 characters
+$ chmod 600 ~/.vnc/passwd
 ```
 
 then put the following as `~/.vnc/xstartup`
@@ -33,12 +37,12 @@ startxfce4 &
 ```
 
 ```sh
-$ chmod 700 $HOME/.vnc/xstartup
+$ chmod 700 ~/.vnc/xstartup
 ```
 
 Now we will also make a systemd unit to control the vncserver:
 
-In `/etc/systemd/system/vncserver@.service` (changing `<MY_USER>`):
+In `/etc/systemd/system/vncserver@.service` (changing `<MY_USER>` and the geometry if you wish):
 
 ```
 [Unit]
@@ -47,8 +51,8 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-User=aces
-Group=aces
+User=<MY_USER>
+Group=<MY_USER>
 WorkingDirectory=/home/<MY_USER>
 
 PIDFile=/home/<MY_USER>/.vnc/%H:%i.pid
@@ -63,27 +67,36 @@ WantedBy=multi-user.target
 Then:
 
 ```sh
-$ systemctl daemon-reload
-$ systemctl enable vncserver@1.service
-$ systemctl start vncserver@1
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable vncserver@1.service
+$ sudo systemctl start vncserver@1
 ```
 
 Note we can always `systemctl disable` the service if we wish to have more manual control.
 
 ## Running Clients
 
+Note: `xtightvncviewer` is not a great option as it seems to:
+
+* not scale the remote desktop to the size of your viewer window.
+* at least on gnome, doesn't respond to any key combo to escape `-fullscreen`
+
+Though you could try `xtigervncviewer`, see if you have `remote-viewer` already installed. Seems better.
+
+However, if you want, here is how to use tightvnc:
+
 ```sh
-# Install dependencies, you only have to choose one of these
 $ sudo apt-get install xtightvncviewer
-$ sudo apt-get install tigervnc-common tigervnc-viewer
-
-# Run the tight viewer
-$ xtightvncviewer test-3.$CT::5901
+$ xtightvncviewer <hostname>::5901
 #--> will prompt for password
+```
 
-# Run xtiger
-$ echo $$PW | vncpasswd -f > _vnc_pw
-$ xtigervncviewer test-3.$CT:5901 -passwordFile _vnc_pw -SecurityTypes VncAuth
+And tigervnc:
+
+```sh
+$ sudo apt-get install tigervnc-common tigervnc-viewer
+$  echo <pw> | vncpasswd -f > _vnc_pw
+$ xtigervncviewer <hostname>:5901 -passwordFile _vnc_pw -SecurityTypes VncAuth
 ```
 
 Note that in this setup, each viewer is to the same vnc session.
