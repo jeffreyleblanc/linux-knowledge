@@ -46,7 +46,34 @@ startxfce4 &
 $ chmod 700 ~/.vnc/xstartup
 ```
 
-Now we will also make a systemd unit to control the vncserver:
+## Directly Running the Server
+
+You can directly the start server with something like:
+
+```sh
+$ vncserver -geometry 1600x1050 -nevershared :1
+#> Will return and be running in the background
+```
+
+To stop the server you can:
+
+```sh
+$ pgrep Xtightvnc
+#> 256573
+
+$ vncserver -kill :1
+#> Killing Xtightvnc process ID 256573
+
+$ pgrep Xtightvnc
+#> --nothing--
+```
+
+And if for some reason the above doesn't work, you can just `kill <pid_from_pgrep>`.
+
+
+## Using Systemd To Control the Server
+
+Now we can also make a systemd unit to control the vncserver:
 
 In `/etc/systemd/system/vncserver@.service` (changing `<MY_USER>` and the geometry if you wish):
 
@@ -107,7 +134,7 @@ $ xtigervncviewer <hostname>:5901 -passwordFile _vnc_pw -SecurityTypes VncAuth
 
 Note that in this setup, each viewer is to the same vnc session.
 
-## Using an SSH Tunnel
+## Using an SSH Tunnel to Connect
 
 To use an ssh tunnel, on the client machine run:
 
@@ -148,8 +175,3 @@ $ firefox
 
 * Tiger VNC looks more feature rich. See <https://wiki.archlinux.org/title/TigerVNC>
 
-Direct running
-
-`vncserver -geometry 1600x1050 -nevershared :1`
-
-killing can also use `pgrep vncserver` to find the PID.
