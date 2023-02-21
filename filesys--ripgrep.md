@@ -39,6 +39,9 @@ $ rg hello -g '*.md' --color never
 
 # Just print files that match on the path
 $ rg $TERM ~/some/path/ --color never -l
+
+# Paging with color output preserved
+$ rg -p $TERM | less -R
 ```
 
 More useful flags:
