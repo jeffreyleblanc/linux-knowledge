@@ -171,7 +171,10 @@ $ export DISPLAY=:1.0
 $ firefox
 ```
 
-## To Integrate
+## Alternatives to investigate
 
-* Tiger VNC looks more feature rich. See <https://wiki.archlinux.org/title/TigerVNC>
+* It's worth noting that in the above we are forking a new wm for the vnc connection, not sharing the one at say tty2
+* Tiger VNC looks more feature rich as server. See <https://wiki.archlinux.org/title/TigerVNC>
+* We could try X11 over ssh for some cases (google "How to forward X over SSH to run graphics applications remotely?")
+* Spice or RDP would be nice, but they seem to either work well only with virtual machines or windows
 
