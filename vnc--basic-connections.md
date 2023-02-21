@@ -144,4 +144,12 @@ $ export DISPLAY=:1.0
 $ firefox
 ```
 
+## To Integrate
 
+* Tiger VNC looks more feature rich. See <https://wiki.archlinux.org/title/TigerVNC>
+
+Direct running
+
+`vncserver -geometry 1600x1050 -nevershared :1`
+
+killing can also use `pgrep vncserver` to find the PID.

@@ -41,5 +41,37 @@ The connection files are located under `/etc/NetworkManager/system-connections/`
 
 Note that if you edit any of them, you must restart the NetworkManager service.
 
+This can be done with `systemctl restart NetworkManager`.
 
+An example wifi file might look like:
+
+```toml
+[connection]
+id=<SOME_NAME_PROBABLY_THE_SSID>
+uuid=<UUID>
+type=wifi
+interface-name=<Device, such as `wlp0s20f3`>
+permissions=
+
+[wifi]
+mac-address-blacklist=
+mode=infrastructure
+ssid=<SSID>
+
+[wifi-security]
+auth-alg=open
+key-mgmt=wpa-psk
+psk=<WIFI_PASSWORD>
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto
+
+[proxy]
+```
 
