@@ -7,7 +7,7 @@
 $ tmux ls
 
 # Make a new named session
-$ tmux new -t NAME
+$ tmux new -s NAME
 
 # Attach to an existing name session
 $ tmux a -t NAME
@@ -22,18 +22,27 @@ Within tmux
     <C> d           detach from session
 
     Panes
-    <C> -           split pane vertically
-    <C> |           split pane horizontally
-    alt+arrow       move to pane
+    <C> -           split pane vertically (custom)
+    <C> |           split pane horizontally (custom)
+    <C> %           split pane vertically
+    <C> %           split pane horizontally
+    <C> arrow       move around panes
+    alt+arrow       move to pane (custom)
     <C> }           switch current and last pane
     <C> space       switch pane layout style
-    <C> [           enter copy mode
-    q               exit copy mode
+    <C> z           focus/unfocus pane
     <C> x           kill pane (y/n prompt)
+    <C> q           display pane indices
+    <C> space       toggle amoung pane layouts
+                    note: may lose nested layouts
+    <C> alt arrow   resize pane
 
-    default:
-    <C> %           split pane vertically
-    <C> arrow       move around panes
+    Copy mode (Need to review)
+    <C> [           enter copy mode
+    <C> space       start copy mark
+    y               grab selection to clipboard
+    q               exit copy mode
+    <C> w           paste from copy buffer
 
     Windows
     <C> c           create a new window in current session
@@ -41,6 +50,9 @@ Within tmux
     <C> <NUMBER>    switch to that window index
     <C> n           next window
     <C> p           prev window
+
+    More
+    <C> ?           List all keybindings, 'q' to quit menu
 
 
 ## Miscellaneous
