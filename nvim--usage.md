@@ -87,7 +87,13 @@ Vim uses modes to handle interaction. Some of the main modes are:
 
 ## Next To Figure Out
 
-* improve search and replace skills/docs
+* more movement
+    * half and full page
+    * centering on a line
+* patterns of saving file changes like emacs does by default
+* improve search skills/docs
+    * also how to enter insert mode on a search item
+* improve replace skills/docs
 * confirm `:e path` reuses buffers?
 * comment/uncomment for selections for:
     * python
