@@ -9,6 +9,45 @@ Some notes (needs review and update):
   is the root of the process tree.
 * Processes can be tracked out of `/proc`.
 
+## PS
+
+`ps` is the basic way to look at processes. It has duplicate flag options which I'll parse out a bit better in the future.
+
+Some basic commands:
+
+```sh
+# See all processes with lots of information
+$ ps aux
+# Alternative flags that shows full command line
+$ ps -efww
+# Foolproof way to search for processes
+$ ps -efww | grep <search_term>
+
+# See all processes owned by user
+$ ps -U <user>
+
+# Look at a specific pid
+$ ps <pid>
+# Look at a list of pid
+$ ps -p <pid>,<pid>,...
+
+# See processes in a rough tree (pstree is an alt)
+$ ps -efH
+```
+
+## Pgrep
+
+`pgrep` provides a nice interface for looking at processes:
+
+```sh
+# Search for command
+$ pgrep <command>
+# Example
+$ pgrep tmux
+
+# Search against full command line pattern
+$ pgrep -f "tmux new -s"
+```
 
 ## Pstree
 
