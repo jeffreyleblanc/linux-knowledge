@@ -96,13 +96,21 @@ $ pstree -T
 $ pstree -C
 ```
 
+## Top/Htop
+
+To see a live updated list of processes filterd/sorted by various criteria, use `top` or `htop`.
+
 ## Kill
 
 ```sh
 # Matching against flags:
 $ pgrep -f "ssh-agent -s"
 $ pkill -f "ssh-agent -s"
-
 ```
+
+To review:
+
+* signals
+* `kill`, `pkill`, `killall`
 
 
