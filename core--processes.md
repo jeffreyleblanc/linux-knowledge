@@ -11,7 +11,7 @@ Some notes (needs review and update):
 
 ## PS
 
-`ps` is the basic way to look at processes. It has duplicate flag options which I'll parse out a bit better in the future.
+`ps` is the basic way to look at processes. It has duplicate flag options which I'll parse out a bit better in the future, as well as many other options.
 
 Some basic commands:
 
@@ -23,16 +23,27 @@ $ ps -efww
 # Foolproof way to search for processes
 $ ps -efww | grep <search_term>
 
-# See all processes owned by user
-$ ps -U <user>
+# See all processes owned by user, note other flags achieve similar
+$ ps -U <username_or_uid>
+# For example see all processes running as root and sudo
+$ ps -U root -u root
 
 # Look at a specific pid
 $ ps <pid>
 # Look at a list of pid
 $ ps -p <pid>,<pid>,...
 
+# Select columns to show, for example:
+$ ps -e -o pid,uname,pcpu,pmem,comm
+
 # See processes in a rough tree (pstree is an alt)
-$ ps -efH
+$ ps -e -H
+# Or:
+$ ps -e --forest
+
+# List and sort processes by memory, or cpu usage (also see top/htop)
+$ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+$ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head
 ```
 
 ## Pgrep
