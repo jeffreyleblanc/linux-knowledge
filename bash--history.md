@@ -11,8 +11,8 @@ In `~/.bashrc` ensure the following:
 HISTSIZE=5000
 # Lines of history stored in file
 HISTFILESIZE=10000
-# Add datestamp to the history
-HISTTIMEFORMAT="%F  "
+# Add iso timestamp to the history
+HISTTIMEFORMAT="%FT%T  "
 # Ensure we are appending to history
 shopt -s histappend
 ```
