@@ -83,6 +83,18 @@ Vim uses modes to handle interaction. Some of the main modes are:
     :bp         go to previous buffer
     :bd         close current buffer (if saved)
     :e path     open buffer on path
+
+6. Windows
+----------
+
+C-w v           split vertically
+C-w s           split horizontally
+C-w q           close focus window
+C-w arrow       move between windows
+
+Note that when you split a window, the new window
+has the original buffer. To get a new file in the new
+window use :e or :bN
 ```
 
 ## Next To Figure Out
