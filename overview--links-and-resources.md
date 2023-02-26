@@ -21,6 +21,10 @@ Cheatsheets:
 
 * <https://devhints.io/>, frontend for <https://github.com/rstacruz/cheatsheets>
 
+## Bash Resources
+
+* <https://www.gnu.org/software/bash/manual/html_node/index.html>
+
 ## Networking Learning Resources
 
 * <https://explained-from-first-principles.com/internet/>
