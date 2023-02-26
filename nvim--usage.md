@@ -87,10 +87,10 @@ Vim uses modes to handle interaction. Some of the main modes are:
 6. Windows
 ----------
 
-C-w v           split vertically
-C-w s           split horizontally
-C-w q           close focus window
-C-w arrow       move between windows
+    C-w v           split vertically
+    C-w s           split horizontally
+    C-w q           close focus window
+    C-w arrow       move between windows
 
 Note that when you split a window, the new window
 has the original buffer. To get a new file in the new
@@ -99,9 +99,12 @@ window use :e or :bN
 
 ## Next To Figure Out
 
+* use vim shortcuts in sublimetext and/or kate
 * more movement
+    * better movement to end of line
     * half and full page
     * centering on a line
+* insert mode line movements?
 * patterns of saving file changes like emacs does by default
 * improve search skills/docs
     * also how to enter insert mode on a search item
