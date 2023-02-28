@@ -54,7 +54,10 @@ For example:
 # Install the tool
 $ apt-get install git-filter-repo
 
-# Go to the repo
+# Backup the repo, just in case
+$ cp -R --preserve my-repo my-repo~backup
+
+# Enter the repo
 $ cd my-repo
 
 # Write out the replacement mailmap file where the format is
@@ -67,6 +70,8 @@ $ git log
 
 # Make sure to set local user.email for future commits
 $ git config user.email jackcoder@users.noreply.github.com
+
+# Clean up `replace.mailmap` and `my-repo~backup` if you want
 ```
 
 Now if you are pushing to a new github path, you can just do that.
