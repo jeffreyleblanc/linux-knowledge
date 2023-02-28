@@ -44,6 +44,34 @@ $ git push -u github master
 
 3. After this you can push with `git push github master`
 
+## Updating Email
+
+If you have an existing repo where the commits have emails you don't want to make public and you want to update the commits, you can use <https://github.com/newren/git-filter-repo>
+
+For example:
+
+```sh
+# Install the tool
+$ apt-get install git-filter-repo
+
+# Go to the repo
+$ cd my-repo
+
+# Write out the replacement mailmap file where the format is
+# "NAME <NEW_EMAIL> <OLD_EMAIL>", such as
+$ echo "Jack Coder <jackcoder@users.noreply.github.com> <jackcoder@gmail.com>" > ../replace.mailmap
+
+# Run the update and then check commits
+$ git filter-repo --mailmap ../replace.mailmap --force
+$ git log
+
+# Make sure to set local user.email for future commits
+$ git config user.email jackcoder@users.noreply.github.com
+```
+
+Now if you are pushing to a new github path, you can just do that.
+If you are overwriting an existing one, you need `git push -f`, or something even more complex.
+
 
 ## Helpful github links
 
@@ -52,11 +80,5 @@ $ git push -u github master
     * from a fork: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork>
 * SSH key handling: <https://docs.github.com/en/authentication/connecting-to-githu
 b-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
-
-## Miscellaneous
-
-If you are trying to use a repo with existing commits that use an email that is not tagged as
-public on github, you can change past commit emails. I haven't gotten to work clearly yet, but
-starting points can reference [this stackoverflow](https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/25815116#25815116)
 
 
