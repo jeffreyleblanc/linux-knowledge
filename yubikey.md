@@ -68,6 +68,18 @@ $ yubico-piv-tool -a import-certificate -s 9a -i joe-smith.pem
 Successfully imported a new certificate.
 ```
 
+## Turning Off Firefox Requests
+
+If you have a yubikey plugged in, Firefox sometimes will popup request dialogs for you to give it access.
+If you want to prevent Firefox from doing this:
+
+1. Go to "Settings > Privacy" (`about:preferences#privacy`)
+2. Under the "Security" section, open "Security Devices"
+3. In the popup, select the "OpenSC smart card... Yubico..." entry and click "Unload"
+
+That should do it for that session of Firefox. I haven't looked into if its possible to permanently disable/enable this.
+
+
 ## Helpful Links
 
 * <https://developers.yubico.com/yubico-piv-tool/Actions/key_generation.html>
