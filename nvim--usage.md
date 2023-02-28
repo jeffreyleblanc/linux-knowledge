@@ -95,6 +95,11 @@ Vim uses modes to handle interaction. Some of the main modes are:
 Note that when you split a window, the new window
 has the original buffer. To get a new file in the new
 window use :e or :bN
+
+7. Other Notes
+
+    :noh            clear highlighting from search
+
 ```
 
 ## Next To Figure Out
