@@ -33,3 +33,14 @@ $ podman exec [ FLAGS... ] $CONTAINER [ COMMAND AND ARGUMENTS FOR WITHIN CONTAIN
 # -e $ENVARS            Such as PYTHONPATH=/root/my-project
 # -w $WORKING_PATH      Such as /mnt/shared/explorer-mirror
 ```
+
+A better way to get a shell on a container that you can exit from normally:
+
+```sh
+h$ podman exec -ti <container_name> /bin/bash
+c$
+# do stuff...
+c$ exit
+h$
+```
+
