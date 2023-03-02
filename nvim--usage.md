@@ -22,16 +22,18 @@ Vim uses modes to handle interaction. Some of the main modes are:
 1.2 Managing Mode
 
     i           enter insert mode
-    ctrl-[      exit insert mode to command mode
+    ctrl [      exit insert mode to command mode
     esc         exit insert mode to command mode
-    shift-V     enter line selection mode
-    shift-v     enter character selection mode
+    shift V     enter line selection mode
+    shift v     enter character selection mode
 
 2. Insert mode
 --------------
 
-    ctrl+o      will let you execute 1 command and then
+    ctrl o      will let you execute 1 command and then
                 go back to insert mode
+    ctrl p      brings up a list of potential word completions
+                use up/down to select the replacement
 
 3. Command mode document interaction
 ------------------------------------
@@ -42,7 +44,7 @@ Vim uses modes to handle interaction. Some of the main modes are:
     dw          delete current word
     p           paste focus (starting in a line below)
 
-3.2 Movement
+3.2 Movement and Cursor Placement
 
     0           to start of line
     $           to end of line
@@ -51,6 +53,15 @@ Vim uses modes to handle interaction. Some of the main modes are:
     :N          jump to line N
     gg          to top of document
     G           to end of document
+
+    ctrl b      move back full screen
+    ctrl f      move forward full screen
+    ctrl d      move forward half screen
+    ctrl u      move back half screen
+
+    zz          center cursor on screen
+    zt          cursor at top of screen
+    zb          cursor at bottom of screen
 
 3.3 Commands
 
@@ -83,6 +94,7 @@ Vim uses modes to handle interaction. Some of the main modes are:
     :bp         go to previous buffer
     :bd         close current buffer (if saved)
     :e path     open buffer on path
+    :e          reload the current buffer from disk
 
 6. Windows
 ----------
@@ -96,9 +108,24 @@ Note that when you split a window, the new window
 has the original buffer. To get a new file in the new
 window use :e or :bN
 
-7. Other Notes
+7. Search and Replace
+---------------------
+
+Search
+
+    1. type `/search-term`
+    2. enter
+    3. use 'n' / 'N' to move through the matches
+    4. on a given selection you can enter insert mode with 'i'
+
+Other notes
 
     :noh            clear highlighting from search
+
+Replace
+
+    :%s/old/new/g   replace all old with new in file
+    :%s/old/new/gc  replace all old with new in file with confirmations
 
 ```
 
