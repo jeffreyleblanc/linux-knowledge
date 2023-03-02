@@ -90,7 +90,7 @@ set updatetime=100
 
 Plugins I use in some setups:
 
-* <https://github.com/mhinz/vim-signify>
-* <https://github.com/cespare/vim-toml>
-
+* Shows git status per file line: <https://github.com/mhinz/vim-signify>
+* Toml syntax highlighting: <https://github.com/cespare/vim-toml>
+* Block comment/uncomment: <https://github.com/tpope/vim-commentary>
 

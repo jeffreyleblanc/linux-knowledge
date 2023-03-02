@@ -127,6 +127,17 @@ Replace
     :%s/old/new/g   replace all old with new in file
     :%s/old/new/gc  replace all old with new in file with confirmations
 
+8. Vim Commentary
+-----------------
+
+In command mode
+
+    gcc             toggle line comment
+
+With a visual block selection
+
+    gc              toggle per line comments
+
 ```
 
 ## Next To Figure Out
