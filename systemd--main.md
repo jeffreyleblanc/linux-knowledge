@@ -2,6 +2,8 @@
 
 ## Commands
 
+### System Wide Overview
+
 To get an overview of systemd status
 
 ```sh
@@ -18,7 +20,9 @@ $ systemctl list-unit-files
 $ systemctl status "*getty*"
 ```
 
-Looking at specific services ( Note that `.service` is implied in the names ):
+### Specific Services
+
+To interact with a specific service ( Note that `.service` is implied in the names ):
 
 ```sh
 # Show summary output (here using nginx as example service)
@@ -42,9 +46,11 @@ $ systemctl restart nginx
 $ systemctl reload nginx
 ```
 
-## Where Unit Files Live
+## Unit Files
 
-Typically systemd unit live in (this can vary):
+### Where Unit Files Are Located
+
+Typically systemd unit files are located in (this can vary):
 
 ```sh
 /lib/systemd/system     # services installed by packages
@@ -52,42 +58,10 @@ Typically systemd unit live in (this can vary):
 /usr/lib/systemd/user   # user based units
 ```
 
-When you run `systemctl status <service> | grep loaded` will show you unit file location.
+`systemctl status <service> | grep loaded` will show you the unit file location.
 
-What does it actually mean for a unit to be `enabled` or `disabled`?
-Consider the example service `myservice` from the next section
 
-```sh
-# Enabled the service
-$ systemctl enable myservice
-#> Created symlink /etc/systemd/system/multi-user.target.wants/myservice.service ->
-#>    /etc/systemd/system/myservice.service.
-
-# So if we look at all the `*.wants` directories we see:
-$ ls /etc/systemd/system/*.wants
-#> --snip--
-#> /etc/systemd/system/multi-user.target.wants:
-#> myservice.service  nginx.service  remote-fs.target  rsync.service  ssh.service
-#> --snip--
-
-# And if we then disable it
-$ systemctl disable myservice
-#> Removed "/etc/systemd/system/multi-user.target.wants/myservice.service".
-
-# And it is no longer listed:
-$ ls /etc/systemd/system/multi-user.target.wants
-#> nginx.service  remote-fs.target  rsync.service  ssh.service
-```
-
-So basically this is done with symlinks from `*.wants` directories.
-Note that the unit includes how to `enable` it with the block:
-
-```
-[Install]
-WantedBy=multi-user.target
-```
-
-## Simple Example Custom Unit
+### A Simple Example Custom Unit
 
 Let's say we have a python script we want to run as a service.
 We can create the file `/etc/systemd/system/myservice.service` as `root`:
@@ -115,6 +89,40 @@ $ systemctl enable myservice
 $ systemctl start myservice
 ```
 
+### Enabled and Disabled
+
+What does it actually mean for a unit to be `enabled` or `disabled`?
+Consider the example service `myservice` from above:
+
+```sh
+# Enabled the service
+$ systemctl enable myservice
+#> Created symlink /etc/systemd/system/multi-user.target.wants/myservice.service ->
+#>    /etc/systemd/system/myservice.service.
+
+# So if we look at all the `*.wants` directories we see:
+$ ls /etc/systemd/system/*.wants
+#> --snip--
+#> /etc/systemd/system/multi-user.target.wants:
+#> myservice.service  nginx.service  remote-fs.target  rsync.service  ssh.service
+#> --snip--
+
+# And if we then disable it
+$ systemctl disable myservice
+#> Removed "/etc/systemd/system/multi-user.target.wants/myservice.service".
+
+# And it is no longer listed:
+$ ls /etc/systemd/system/multi-user.target.wants
+#> nginx.service  remote-fs.target  rsync.service  ssh.service
+```
+
+So basically this is done with symlinks from `*.wants` directories.
+Note that the unit file includes how to `enable` it with the block:
+
+```
+[Install]
+WantedBy=multi-user.target
+```
 
 ## Resources and Links
 
