@@ -47,9 +47,14 @@ Vim uses modes to handle interaction. Some of the main modes are:
 3.2 Movement and Cursor Placement
 
     0           to start of line
-    $           to end of line
+    _ or ^      to first non whitespace of line
+    $           to end of line (in practice 1 from end of line)
     w           forward a word
     b           backwards a word
+
+    A           go to end of line and enter insert mode (append)
+    I           go to start of line (non whitespace) and enter insert mode
+
     :N          jump to line N
     gg          to top of document
     G           to end of document
