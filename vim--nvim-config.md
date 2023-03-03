@@ -94,3 +94,22 @@ Plugins I use in some setups:
 * Toml syntax highlighting: <https://github.com/cespare/vim-toml>
 * Block comment/uncomment: <https://github.com/tpope/vim-commentary>
 
+And a basic script I could use to set this up:
+
+```sh
+#!/bin/bash
+
+NR=~/.config/nvim
+NRP="$NR/pack"
+
+# Make the base directories
+mkdir -p $NRP
+
+mkdir -p $NRP/mhinz/start
+( cd $NRP/mhinz/start/ && git clone https://github.com/mhinz/vim-signify )
+mkdir -p $NRP/cespare/start
+( cd $NRP/cespare/start && git clone https://github.com/cespare/vim-toml )
+mkdir -p $NRP/pack/mpope/start
+( cd $NPR/tpope/start/ && git clone https://github.com/tpope/vim-commentary )
+```
+
