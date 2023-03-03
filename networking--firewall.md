@@ -5,6 +5,11 @@
 Basics:
 
 ```sh
+# Installation
+$ sudo apt-get install ufw
+$ type ufw
+#> ufw is /usr/sbin/ufw
+
 # Check status and enable/disable
 $ sudo ufw status
 $ sudo ufw enable
