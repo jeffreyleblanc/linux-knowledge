@@ -145,6 +145,41 @@ With a visual block selection
 
 ```
 
+## More Advanced Editing Patterns
+
+### Multi Line Manipulation
+
+While `vim-commentary` works well for a specific file, e.g. `.py` or `.js`, it doesn't
+have the sophistication to understand (for example) fenced code blocks in markdown.
+So if you use it in a `/.md` file `sh` block, it will implement html comment tags.
+
+The following pattern is effective:
+
+```
+Multi Line Editing
+------------------
+
+To add something like "#> " to a set of lines:
+
+    1. Go to the line/column where want to start
+    2. Hit `ctrl v`
+    3. move to last line you want to apply to
+    4. hit `shift i`
+    5. type what you want, for example "#> "
+    6. hit `esc` or `ctrl [`
+    7. The text will be applied to all lines.
+
+To remove a block of characters
+
+    1. Go to the line/column where you want to start
+    2. Expand the selection "box" to encompass what you want to remove
+        use h,j,k,l or arrows
+    3. Hit `x`
+    4. The selection box will be deleted
+
+```
+
+
 ## Next To Figure Out
 
 * use vim shortcuts in sublimetext and/or kate

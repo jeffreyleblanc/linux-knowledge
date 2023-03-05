@@ -1,20 +1,7 @@
 # Vim Topics To Handle
 
-## Multiline Updates
+## More on Modes
 
-Pattern to explore more:
-
-1. Go to where you want to start
-2. Hit `ctrl v`
-3. move to last line you want to apply to
-4. hit `shift i`
-5. type what you want, for example "#> "
-6. hit `esc` or `ctrl [`
-7. The text will be applied to all lines.
-
-A question is what pattern can remove things like this?
-
-Basically we need to explore the mode from `ctrl v` vs `shift v` (and `v`).
 Worth googling "Introduction to Vim Modes" to learn more.
 
 ## Vim Plugins
