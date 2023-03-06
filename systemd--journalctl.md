@@ -19,31 +19,31 @@ $ journalctl -u UNIT_NAME
 $ journalctl _UID=$(id -u USERNAME)
 
 # Viewing pid
-$ journalctl _UID=USER _PID=PID
+$ journalctl _UID=USER_ID _PID=PID
 ```
 
 Some useful flags
 
 ```sh
 # Direction
--r          In reverse, most recent first
--f          Follow, appending new entries
+-r              # In reverse, most recent first
+-f              # Follow, appending new entries
 
 # Filters
--b          Just since most recent boot
--g TERM     Grep within journal
+-b              # Just since most recent boot
+-g TERM         # Grep within journal
 # And you can use human language time
 --since "10 minutes ago"
 
 # Output
--n N            Only show N most recent lines
--x              Add explanatory messages
--l              ellipsize lines to terminal width
---no-hostname   Don't show the hostname
--o cat          Simple lines, no timestamp
--o json         use json output
--o short-iso    use iso dateformat
-# ... many other formats, `man journalctl` to review
+-n N            # Only show N most recent lines
+-x              # Add explanatory messages
+-l              # ellipsize lines to terminal width
+--no-hostname   # Don't show the hostname
+-o cat          # Simple lines, no timestamp
+-o json         # use json output
+-o short-iso    # use iso dateformat
+# ...many other formats, `man journalctl` to review
 ```
 
 ## Configuration and Files
