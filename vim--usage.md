@@ -43,6 +43,7 @@ Vim uses modes to handle interaction. Some of the main modes are:
     dd          delete current line
     dw          delete current word
     p           paste focus (starting in a line below)
+    x           delete character on
 
 3.2 Movement and Cursor Placement
 
@@ -178,6 +179,14 @@ To remove a block of characters
     4. The selection box will be deleted
 
 ```
+
+## Misc Topics
+
+### Autocomplete file paths
+
+* When typing a command like `:e dir1/dir2/path` the `tab` key will bring up autocomplete options
+* Use `left/right` to cycle through the options listed
+* Use `up/down` to jump up or down a directory level
 
 
 ## Next To Figure Out
