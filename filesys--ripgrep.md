@@ -54,6 +54,14 @@ More useful flags:
 # --trim        remove whitespace around lines
 ```
 
+Showing additional lines for each match
+
+```sh
+-A N        Show N lines after each match
+-B N        Show N lines before each match
+-C N        Show N lines before and after each match
+```
+
 ## More Examples
 
 ```sh

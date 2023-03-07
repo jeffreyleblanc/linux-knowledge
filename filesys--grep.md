@@ -37,4 +37,11 @@ $ grep -r -n <term> .
 $ grep -r -n <term> <directory_path>
 ```
 
+Showing additional lines for each match
+
+```sh
+-A N        Show N lines after each match
+-B N        Show N lines before each match
+-C N        Show N lines before and after each match
+```
 
