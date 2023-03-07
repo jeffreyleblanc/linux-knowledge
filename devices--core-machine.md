@@ -2,6 +2,15 @@
 
 ## Paths and Commands
 
+General information about the machine
+
+```sh
+$ sudo dmidecode
+
+# Get just main info
+$ sudo dmidecode | grep -A 8 "^System Information"
+```
+
 OS Version
 
 ```sh
