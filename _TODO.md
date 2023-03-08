@@ -182,4 +182,5 @@ More misc topics/programs:
     echo/print/printf
     wc
     chron
+    pv  --> monitors progress of data through a pipe
 
