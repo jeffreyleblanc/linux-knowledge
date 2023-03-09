@@ -87,3 +87,8 @@ If you are overwriting an existing one, you need `git push -f`, or something eve
 b-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 
 
+## Github Alternatives
+
+* <https://gitlab.com>
+* self hosted <https://gitea.io>
+

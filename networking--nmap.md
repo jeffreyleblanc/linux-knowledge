@@ -9,6 +9,9 @@ $ nmap -sn 192.168.1.0/24
 
 # The above just lists found IP, to list all queried
 $ nmap -sn -v 192.168.1.0/24
+
+# To look for open ports (here 80)
+$ nmap -p 80 192.168.1.0/24
 ```
 
 
