@@ -32,6 +32,17 @@ $ git status
 $ git commit -m "My commit Message"
 ```
 
+Basic reset
+
+```
+# Revert all unstaged files
+$ git restore .
+
+# Revert specific file
+$ git restore <file-path>
+```
+
+
 ## 2) Git Branches
 
 ```sh
