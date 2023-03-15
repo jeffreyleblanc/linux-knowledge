@@ -44,6 +44,8 @@ Vim uses modes to handle interaction. Some of the main modes are:
     dw          delete current word
     p           paste focus (starting in a line below)
     x           delete character on
+    d0          delete everything left of cursor
+    d$          delete cursor and everything right
 
 3.2 Movement and Cursor Placement
 
