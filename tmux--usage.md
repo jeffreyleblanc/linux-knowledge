@@ -42,7 +42,9 @@ Within tmux
     <C> space       start copy mark
     y               grab selection to clipboard
     q               exit copy mode
-    <C> w           paste from copy buffer
+    # If global clipboard fails
+    ctrl w          copy selection
+    <C> ]           paste selection
 
     Windows
     <C> c           create a new window in current session
