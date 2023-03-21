@@ -17,11 +17,22 @@ $ apt-get purge PACKAGE
 $ apt-get upgrade
 $ apt-get dist-upgrade
 
+
+# List files that a package installed
+$ dpkg -L PACKAGE
+
+# Determine which package (if any) installed a file
+$ dpkg -S /usr/lib/python3/dist-packages/tornado/websocket.py
+#> python3-tornado: /usr/lib/python3/dist-packages/tornado/websocket.py
+$ dpkg -S random-file.txt
+#> dpkg-query: no path found matching pattern *random-file.txt*
+```
+
+Topics to include:
+
+```sh
 ## fix broken
 ## full upgrade
-
-
-$ dkpg -L
 $ dpkg -i
 $ dpkg -I
 $ dpkg -S
