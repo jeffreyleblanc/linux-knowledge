@@ -11,6 +11,9 @@ $ tree --charset=ascii
 
 # Print all files, including dot files
 $ tree -a
+
+# Print only directories
+$ tree -d
 ```
 
 Additional useful flags
