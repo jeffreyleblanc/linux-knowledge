@@ -78,6 +78,29 @@ Now if you are pushing to a new github path, you can just do that.
 If you are overwriting an existing one, you need `git push -f`, or something even more complex.
 
 
+## Renaming a Repo
+
+Say you rename a repo through the github web interface, for example I changed
+the name of this repo from `base-linux-knowledge` to `linux-knowledge`.
+How can you easily update your remote?
+
+```sh
+# Old url
+$ git remote -v
+#> github  git@github.com:jeffreyleblanc/base-linux-knowledge.git (fetch)
+#> github  git@github.com:jeffreyleblanc/base-linux-knowledge.git (push)
+
+# Update the url
+$ git remote set-url github git@github.com:jeffreyleblanc/linux-knowledge.git
+
+# Confirm works
+$ git pull github master
+#> From github.com:jeffreyleblanc/linux-knowledge
+#>  * branch            master     -> FETCH_HEAD
+#> Already up to date.
+```
+
+
 ## Helpful github links
 
 * Pull requests
