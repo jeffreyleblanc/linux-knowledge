@@ -14,6 +14,9 @@ $ tree -a
 
 # Print only directories
 $ tree -d
+
+# Ignore a directory
+$ tree -I node_modules
 ```
 
 Additional useful flags
