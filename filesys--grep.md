@@ -45,3 +45,24 @@ Showing additional lines for each match
 -C N        Show N lines before and after each match
 ```
 
+Other patterns:
+
+```sh
+# Note that we escape the '$'
+grep -r "\$G" .
+
+# To search for just files of a certain type:
+grep -r --include "*.vue" "\$G" .
+```
+
+To review:
+
+* case insenstive
+* regex, particullarly word boundaries
+* match multiple file types
+* multiple matches on a line (likely by chaining grep)
+* show line numbers
+* just show lines
+* just show files (without duplicates)
+* Using `git grep`
+

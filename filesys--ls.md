@@ -6,6 +6,8 @@ $ ls -t -1
 
 # sort old -> new
 $ ls -tr -1
-```
 
+# Only list hidden files/folders:
+$ ls -ld .?*
+```
 
