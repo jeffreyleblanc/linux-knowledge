@@ -22,10 +22,10 @@ Within tmux
     <C> d           detach from session
 
     Panes
-    <C> -           split pane vertically (custom)
-    <C> |           split pane horizontally (custom)
-    <C> %           split pane vertically
-    <C> %           split pane horizontally
+    <C> |           split pane into left/right (custom)
+    <C> -           split pane into top/bottom (custom)
+    <C> %           split pane into left/right
+    <C> "           split pane into top/bottom
     <C> arrow       move around panes
     alt+arrow       move to pane (custom)
     <C> }           switch current and last pane
