@@ -36,6 +36,9 @@ $ pass <ppath>
 
 # To copy entry to clipboard
 $ pass -c <ppath>
+
+# To search
+$ pass find KEYWORD
 ```
 
 Entering and editing:
