@@ -104,6 +104,9 @@ Vim uses modes to handle interaction. Some of the main modes are:
     :e path     open buffer on path
     :e          reload the current buffer from disk
 
+    To list available files in working directory
+    :e ctrl d
+
 6. Windows
 ----------
 
