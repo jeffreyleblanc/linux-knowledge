@@ -6,6 +6,7 @@ There are 3 kind of "timestamps":
 
 * `atime`, Access - the last time the file was read
     * Note that this is not strictly true. Multiple reads may not change `atime`
+    * See <https://en.wikipedia.org/wiki/Stat_(system_call)#Criticism_of_atime>
     * See <https://superuser.com/questions/464290/why-is-cat-not-changing-the-access-time>
 * `mtime`, Modify - the last time the file was modified (content has been modified)
 * `ctime`, Change - the last time meta data of the file was changed (e.g. permissions)
@@ -122,7 +123,13 @@ $ stat T.txt
 
 ## Modifying Timestamps
 
-`touch` can change `mtime` directly with:
+To force update a file's `atime`:
+
+```sh
+$ touch -a FILE
+```
+
+To change a file's `mtime` to a specific time:
 
 ```sh
 $ touch -t YYYYMMDDhhmm[.ss] FILE
