@@ -122,7 +122,7 @@ $ stat T.txt
 
 ## Modifying Timestamps
 
-`touch` can change mtime directly with:
+`touch` can change `mtime` directly with:
 
 ```sh
 $ touch -t YYYYMMDDhhmm[.ss] FILE
