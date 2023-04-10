@@ -5,6 +5,8 @@
 There are 3 kind of "timestamps":
 
 * `atime`, Access - the last time the file was read
+    * Note that this is not strictly true. Multiple reads may not change `atime`
+    * See <https://superuser.com/questions/464290/why-is-cat-not-changing-the-access-time>
 * `mtime`, Modify - the last time the file was modified (content has been modified)
 * `ctime`, Change - the last time meta data of the file was changed (e.g. permissions)
     * This is also updated whenever `mtime` is updated
@@ -23,6 +25,13 @@ $ stat E.txt
 #> Modify: 2018-08-08 01:23:00.000000000 -0400
 #> Change: 2023-04-10 12:02:17.668846407 -0400
 #>  Birth: 2023-04-10 11:52:28.059086726 -0400
+
+# To format output (see man stat):
+$ stat --printf "b %w\na %x\nm %y\nc %z\n" E2.txt
+#> b 2023-04-10 14:56:29.584049757 -0400
+#> a 2023-04-10 14:54:49.022378999 -0400
+#> m 2023-04-10 14:54:32.098098508 -0400
+#> c 2023-04-10 14:56:29.584049757 -0400
 ```
 
 `ls` uses `mtime` by default unless otherwise directed:
@@ -53,7 +62,62 @@ Also note that `ls -l` will abbreviate timestamps based on their recency.
 
 ## Move and Copy Impacts
 
-**FILL IN**
+Using `mv` will update just the files `ctime`:
+
+```sh
+$ touch Z.txt
+$ stat Z.txt
+#> --snip--
+#> Access: 2023-04-10 14:50:23.514007677 -0400
+#> Modify: 2023-04-10 14:50:23.514007677 -0400
+#> Change: 2023-04-10 14:50:23.514007677 -0400
+#>  Birth: 2023-04-10 14:50:23.514007677 -0400
+
+$ mv Z.txt Z2.txt
+$ stat Z2.txt
+#> --snip--
+#> Access: 2023-04-10 14:50:23.514007677 -0400
+#> Modify: 2023-04-10 14:50:23.514007677 -0400
+#> Change: 2023-04-10 14:50:39.674271677 -0400 # changed
+#>  Birth: 2023-04-10 14:50:23.514007677 -0400
+```
+
+`cp` has multiple options but two main ones are:
+
+* no flag: all new times
+* `-p`: same `atime` and `mtime`
+
+```sh
+# We make a file
+$ echo "time" > T.txt
+$ stat T.txt
+#> Access: 2023-04-10 15:04:46.748380666 -0400
+#> Modify: 2023-04-10 15:04:46.748380666 -0400
+#> Change: 2023-04-10 15:04:46.748380666 -0400
+#>  Birth: 2023-04-10 15:04:46.748380666 -0400
+
+# And copy with no flags, so all times are "new"
+$ cp T.txt T2.txt
+$ stat T2.txt
+#> Access: 2023-04-10 15:05:06.504713343 -0400
+#> Modify: 2023-04-10 15:05:06.504713343 -0400
+#> Change: 2023-04-10 15:05:06.504713343 -0400
+#>  Birth: 2023-04-10 15:05:06.504713343 -0400
+
+# If we copy with -p
+# (same as --preserve=mode,ownership,timestamps)
+$ cp -p T.txt T3.txt
+$ stat T3.txt
+#> Access: 2023-04-10 15:05:06.504713343 -0400 # same
+#> Modify: 2023-04-10 15:04:46.748380666 -0400 # same
+#> Change: 2023-04-10 15:05:23.036991796 -0400 # diff
+#>  Birth: 2023-04-10 15:05:23.036991796 -0400 # diff
+$ stat T.txt
+#> Access: 2023-04-10 15:05:06.504713343 -0400
+#> Modify: 2023-04-10 15:04:46.748380666 -0400
+#> Change: 2023-04-10 15:04:46.748380666 -0400
+#>  Birth: 2023-04-10 15:04:46.748380666 -0400
+```
 
 
 ## Modifying Timestamps
