@@ -70,7 +70,12 @@ $ pass rm <ppath>
 
 ## Customizations
 
-We can set the envar `PASSWORD_STORE_DIR` to point to a custom password-store directory. By default `~/.password-store`.
+We can set the envar `PASSWORD_STORE_DIR` to point to a custom password-store directory. By default `~/.password-store`. For example:
+
+```sh
+# In ~/.bashrc or ~/.bashrc.d
+export PASSWORD_STORE_DIR=/home/myuser/Documents/_pass
+```
 
 
 ## Questions:
