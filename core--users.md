@@ -22,12 +22,17 @@ Making new users
 
 ```sh
 # Making a new user
-$ sudo adduser siteadmin
+$ sudo adduser USERNAME
 
 # Adding a user to a group (sudo for example)
-$ sudo usermod -aG sudo siteadmin
+$ sudo usermod -aG sudo USERNAME
 ```
 
 Note there is also a lower level `useradd`, though `adduser` is preferred.
 
+Removing users
+
+```sh
+$ deluser --remove-home USERNAME
+```
 
