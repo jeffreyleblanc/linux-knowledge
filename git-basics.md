@@ -2,10 +2,46 @@
 
 ## Inbox
 
+### Diff by file type
+
 ```sh
 # Only show diff for certain kinds of files
 $ git diff -- '*.js' '*.vue'
 ```
+
+### Basic Stats
+
+Determining basic stats on a repo:
+
+```sh
+# Total commits (here from master but could be branch of commit hash)
+$ git rev-list --count master
+
+# Total commits across all branches etc
+$ git rev-list --count --all
+
+# Commits by contributer on current branch
+$ git shortlog -sn
+
+# Commits by contributer across all branches
+$ git shortlog -sn --all
+```
+
+### New Repo from Another
+
+Generating a new repo from a path on another
+
+**NOTE**: mileage may vary here.
+
+```sh
+# 1. Make a clone of the repo (and you probably only need the master branch)
+
+# 2. Go into it and
+$ git filter-repo --path PATH/TO/KEEP
+```
+
+Note you need <https://github.com/newren/git-filter-repo>, or `apt-get install git-filter-repo`.
+
 
 ## 1) Git Super Basics
 
