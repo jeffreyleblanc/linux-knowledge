@@ -28,6 +28,23 @@ $ dpkg -S random-file.txt
 #> dpkg-query: no path found matching pattern *random-file.txt*
 ```
 
+Download a deb
+
+```sh
+$ apt download PACKAGE
+#> .deb will be in cwd
+```
+
+Determine dependencies
+
+```sh
+# Also look at `apt-rdepends`
+$ apt show PACKAGE | grep Dependencies
+
+# For a .deb file
+$ dpkg -S DEB_FILE | grep Depends
+```
+
 Topics to include:
 
 ```sh
