@@ -11,3 +11,9 @@ $ sudo apt-get install fd-find
 $ fdfind -h
 ```
 
+To look for hidden files:
+
+```sh
+$ fdfind -H .gitignore
+```
+
