@@ -1,5 +1,13 @@
 # Sway Window Manager
 
+## TODO
+
+* Sway lock screen
+* Switch sway status bar to 24 hour time
+
+
+## Overview
+
 Sway is a tiling window manager for wayland. It is basically a clone of i3 (which works with X).
 
 Helpful links:
