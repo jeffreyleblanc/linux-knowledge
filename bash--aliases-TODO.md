@@ -8,4 +8,9 @@ To Do:
 * export to shell scripts
 * alias vs function
 
+To list available aliases:
+
+```sh
+$ alias -p
+```
 
