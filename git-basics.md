@@ -43,6 +43,13 @@ $ git filter-repo --path PATH/TO/KEEP
 Note you need <https://github.com/newren/git-filter-repo>, or `apt-get install git-filter-repo`.
 
 
+### Config
+
+```sh
+# To see config within a repo
+$ git config --list
+```
+
 ## 1) Git Super Basics
 
 ```sh

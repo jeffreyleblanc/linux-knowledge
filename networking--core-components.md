@@ -17,3 +17,9 @@
     * Promiscious Mode and TCPDump
     * NAT
     * Port Mapping
+
+Terms to differentiate:
+
+* `host` vs `hostname` vs `fqdn`
+* `path` vs `uri` vs `url`
+
