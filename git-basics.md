@@ -62,11 +62,14 @@ $ git diff
 $ git diff --cached
 
 # Add files to be commited
-$ git add $FILE_PATH
+$ git add FILE_PATH
 # Add all files (not ignored) to be committed
 $ git add .
 # Dry run what will be added
 $ git add -n .
+
+# Remove files from tracking that are deleted
+$ git rm FILE_PATH
 
 # Look at the status of the repo
 $ git status
