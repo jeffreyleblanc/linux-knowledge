@@ -18,30 +18,33 @@ $ which rg
 
 ```sh
 # Search for something in a given file
-$ rg $TERM my-file.txt
+$ rg TERM my-file.txt
 
 # Search recursively in all markdown files
-$ rg $TERM -g '*.md'
+$ rg TERM -g '*.md'
 
 # Search recursively in all NON markdown files
-$ rg $TERM -g '!*.md'
+$ rg TERM -g '!*.md'
 
 ## Contrast with -f, also note all options within -g and multiple -g
 
 # Output as json
-$ rg $TERM -g '*.md' --json
+$ rg TERM -g '*.md' --json
 
 # Only print files with contents:
-$ rg $TERM -g '*.md' -l
+$ rg TERM -g '*.md' -l
 
 # Example of not using color in output
 $ rg hello -g '*.md' --color never
 
 # Just print files that match on the path
-$ rg $TERM ~/some/path/ --color never -l
+$ rg TERM ~/some/path/ --color never -l
 
 # Paging with color output preserved
-$ rg -p $TERM | less -R
+$ rg -p TERM | less -R
+
+# Never print files
+$ rg -I TERM
 ```
 
 More useful flags:
@@ -65,6 +68,9 @@ Showing additional lines for each match
 ## More Examples
 
 ```sh
+# Look for control characters like "Auth("
+$ rg "Auth\("
+
 # Look for certain calls in a file
 $ rg -e 'P\.\w+\(' snackpack.py --trim -N -o | sort | uniq
 # P.b(
