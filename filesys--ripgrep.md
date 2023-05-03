@@ -50,7 +50,8 @@ $ rg -I TERM
 More useful flags:
 
 ```sh
-# --hidden      search for hidden files and directories
+# -.            search for hidden files and directories
+# --hidden
 # -i            ignore case
 # -N            don't print the line number in the output
 #               --no-line-number
