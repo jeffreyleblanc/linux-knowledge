@@ -41,6 +41,15 @@ Using symlinks to raise structure
 
 Ideas:
 
+* Converting paths to single file names
+* For example say want to move a file to a trash can, but preserve some info on it
+* Transform:
+    * `media/stream/2017-09/20170923_file.jpg`
+    * =>
+    * `_P-media_d-stream_d-2017-09_P-20170923_file.jpg`
+* So `path` => `f"_P-{'_d-'.join(path.parts()[:-1]}_P-{path.name} "`
+    * Need to test
+
 Make git based marker like `file.d`, e.g. `project-name.gitd/`
 
 
