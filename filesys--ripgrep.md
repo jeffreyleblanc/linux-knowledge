@@ -69,6 +69,9 @@ Showing additional lines for each match
 ## More Examples
 
 ```sh
+# Look for python main class definitions
+$ rg -N "^class"
+
 # Look for control characters like "Auth("
 $ rg "Auth\("
 
