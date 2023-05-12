@@ -2,6 +2,14 @@
 
 ## Inbox
 
+### Clean Repo
+
+Clean of everything not tracked:
+
+```sh
+$ git clean -fxd
+```
+
 ### Diff by file type
 
 ```sh
