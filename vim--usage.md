@@ -82,6 +82,7 @@ Vim uses modes to handle interaction. Some of the main modes are:
     d           cut selection
     shift >     indent selection
     shift <     dedent selection
+    gv          reselect last block
 
 5. Management
 -------------
