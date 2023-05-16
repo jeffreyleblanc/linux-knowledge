@@ -1,5 +1,10 @@
 # Debian/Ubuntu Package Management Overview
 
+## Inbox / Review
+
+`apt-get full-upgrade`
+
+
 ## Basics
 
 Note that most of these commands (the ones that change the system) must be run as root or with sudo.

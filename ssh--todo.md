@@ -1,5 +1,10 @@
 # SSH Topics to Cover
 
+
+## Inbox
+
+How to use `/var/log/auth.log` to track access and issues
+
 ## Basic Topics to add
 
 * general overview of file locations and tools

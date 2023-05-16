@@ -150,6 +150,18 @@ With a visual block selection
 
     gc              toggle per line comments
 
+9. Vim Signify
+--------------
+
+    :set signcolumn=no      Hide signs
+    :set signcolumn=yes     Show signs
+
+10. Line Numbers
+---------------
+
+    :set nonu       Hide line numbers. Short for `:set nonumber`
+    :set nu         Show line numbers. Short for `:set number`
+
 ```
 
 ## More Advanced Editing Patterns

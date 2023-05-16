@@ -41,6 +41,14 @@ Additional useful flags
           files, a `>' for doors (Solaris) and a `|' for FIFO's, as per ls -F
 ```
 
+**REVIEW**:
+
+```
+--gitignore
+--gitfile FILE
+--noreport
+```
+
 Using tree in a programmatic way to output json and fullpaths:
 
 ```sh

@@ -23,3 +23,7 @@ Terms to differentiate:
 * `host` vs `hostname` vs `fqdn`
 * `path` vs `uri` vs `url`
 
+Review
+
+* `hostname -I`
+
