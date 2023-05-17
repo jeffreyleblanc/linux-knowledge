@@ -2,6 +2,17 @@
 
 ## Inbox
 
+### Switch
+
+To get a remote branch you can do:
+
+```sh
+$ git switch BRANCH
+```
+
+We should describe better how to get/manage remote branches and tags
+
+
 ### Clean Repo
 
 Clean of everything not tracked:
