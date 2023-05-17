@@ -45,32 +45,62 @@ set $term gnome-terminal
 ## Keybindings
 
 ```
-$M mapped to 'windows' key
+Meta Information
+----------------
 
-# Application Control
-$M Enter             start a terminal
-$M d                 start program launcher
+    $M mapped to 'super/windows' key
 
-# Window Controls
-$M Arrows            move among windows in workspace
-$M Shift+space       toggle floating
-$M Shift+q           quit focus window
-$M left-click/drag   resize floating windows
-$M right-click/drag  move floating window
+    hjkl mapping:
+        h   left
+        j   down
+        k   up
+        l   right
 
-# Non floating window layout ( $M arrows moves among them)
-$M e                 Default view all windows
-$M s                 Stacked layout
-$M w                 Tabbed layout
-$M f                 Toggle focus window fullscreen
 
-# Workspaces
-$M NUM               Make or go to that workspace
-$M shift+$N             move window to workspace $N
-Ctrl+alt+arrow          move prev/next workspace
+Application Control
+-------------------
 
-# Overall
-$M Shift e           prompt to exit sway
+    $M Enter    start a terminal
+    $M d        start program launcher
+
+
+Window Control
+--------------
+
+    $M f                    Toggle focus window fullscreen
+    $M Arrows               move among windows in workspace
+    $M Shift+space          toggle floating
+    $M Shift+q              quit focus window
+    $M left-click/drag      resize floating windows
+    $M right-click/drag     move floating window
+
+
+Window Layout
+-------------
+
+    $M arrows   move between windows (any layout type)
+
+    $M e        Tiled layout (default)
+    $M s        Stacked layout
+    $M w        Tabbed layout
+
+    In tiled layout:
+        $M shift arrows
+    Will reorder windows
+
+
+Workspaces
+---------
+
+    $M NUM                  Make or go to that workspace
+    $M shift+$N             move window to workspace $N
+    Ctrl+alt+arrow          move prev/next workspace
+
+
+Overall
+-------
+
+    $M Shift e           prompt to exit sway
 ```
 
 See also <https://i3wm.org/docs/refcard.html>
