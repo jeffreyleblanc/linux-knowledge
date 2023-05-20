@@ -41,6 +41,14 @@ set $term gnome-terminal
     bindsym Control+Alt+Right workspace next
 ```
 
+## From Command Line
+
+To exit from sway (and back to login manager):
+
+```sh
+$ sway exit
+```
+
 
 ## Keybindings
 
@@ -100,7 +108,8 @@ Workspaces
 Overall
 -------
 
-    $M Shift e           prompt to exit sway
+    $M Shift e              prompt to exit sway
+    $M Shift c              reload sway config
 ```
 
 See also <https://i3wm.org/docs/refcard.html>
