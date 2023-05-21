@@ -28,17 +28,29 @@ I make the following updates to the config file:
 
 ```sh
 # Your preferred terminal emulator
-#orig set $term foot
+#orig> set $term foot
 set $term gnome-terminal
+
+#custom>
+# Set output * bg FILEPATH
+# To your desired background
 
 #
 # Workspaces:
 #
     # --snip--
 
-    #custom: Add moving workspaces
+    #custom> Add moving workspaces
     bindsym Control+Alt+Left workspace prev
     bindsym Control+Alt+Right workspace next
+    #<custom
+
+#
+# Status Bar:
+#
+
+    #custom> Use ISO 8601 -ish date/time
+    status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
 ```
 
 ## From Command Line
