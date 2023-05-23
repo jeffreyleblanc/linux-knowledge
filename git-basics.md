@@ -2,6 +2,22 @@
 
 ## Inbox
 
+### More remotes
+
+```sh
+# See all remote branches
+$ git br -r
+$ git remote show REMOTE
+
+# Fetch updates from a remote
+$ git fetch REMOTE
+
+# Full way to get a remote branch
+$ git co --track REMOTE/BRANCH
+
+```
+
+
 ### Switch
 
 To get a remote branch you can do:
