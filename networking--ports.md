@@ -3,6 +3,17 @@
 The following shows how to examine what ports are in use and what processes
 are using them.
 
+## INBOX
+
+Looking for actively bound ports:
+
+```sh
+$ lsof -iPn | grep LISTEN
+
+$ netstat -tulpn | grep LISTEN
+```
+
+
 ## Examples
 
 ```sh
