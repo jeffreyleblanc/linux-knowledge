@@ -52,10 +52,11 @@ Within tmux
     <C> <NUMBER>    switch to that window index
     <C> n           next window
     <C> p           prev window
+    <C> &           kill current window
 
     More
     <C> ?           List all keybindings, 'q' to quit menu
-
+    <C> =           List buffer selections: usefulness TBD
 
 ## Miscellaneous
 
