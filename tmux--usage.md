@@ -13,15 +13,32 @@ $ tmux new -s NAME
 $ tmux a -t NAME
 ```
 
-## Key Mapping
+## Key Mappings
 
+```
 Within tmux
 
-    <C> = ctrl+b or ctrl+a
+<C> = ctrl+b or ctrl+a
 
+Sessions
+--------
+
+    <C> $           rename current session
     <C> d           detach from session
 
-    Panes
+Windows
+-------
+
+    <C> c           create a new window in current session
+    <C> ,           rename current window
+    <C> <NUMBER>    switch to that window index
+    <C> n           next window
+    <C> p           prev window
+    <C> &           kill current window
+
+Panes
+-----
+
     <C> |           split pane into left/right (custom)
     <C> -           split pane into top/bottom (custom)
     <C> %           split pane into left/right
@@ -37,7 +54,9 @@ Within tmux
                     note: may lose nested layouts
     <C> alt arrow   resize pane
 
-    Copy mode (Need to review)
+Copy mode (Need to review)
+--------------------------
+
     <C> [           enter copy mode
     <C> space       start copy mark
     y               grab selection to clipboard
@@ -46,17 +65,13 @@ Within tmux
     ctrl w          copy selection
     <C> ]           paste selection
 
-    Windows
-    <C> c           create a new window in current session
-    <C> ,           rename current window
-    <C> <NUMBER>    switch to that window index
-    <C> n           next window
-    <C> p           prev window
-    <C> &           kill current window
+More
+----
 
-    More
     <C> ?           List all keybindings, 'q' to quit menu
     <C> =           List buffer selections: usefulness TBD
+```
+
 
 ## Miscellaneous
 
