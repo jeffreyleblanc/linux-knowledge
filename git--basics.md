@@ -2,6 +2,20 @@
 
 ## Inbox
 
+### Setting Path
+
+```sh
+$ git -C REPO_PATH <commands...>
+```
+
+e.g.
+
+```sh
+$ git -C ~/code/my-proj git st
+$ git -C ~/code/my-other-proj git br -r
+```
+
+
 ### More remotes
 
 ```sh
