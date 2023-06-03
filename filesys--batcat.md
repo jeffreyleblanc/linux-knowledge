@@ -6,15 +6,17 @@ It also pages by default.
 ```sh
 $ sudo apt-get install bat
 $ batcat myfile.py
+# or
+$ bat myfile.py
 
 # Get help
-$ batcat -h
-$ batcat --help
+$ bat -h
+$ bat --help
 
 # List all understood formats
-$ batcat -L
+$ bat -L
 
 # View a file with a specific format
-$ batcat -l "Apache Conf" my-conf
+$ bat -l "Apache Conf" my-conf
 ```
 
