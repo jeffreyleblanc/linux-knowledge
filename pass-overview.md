@@ -102,6 +102,10 @@ $ gpg --sign --encrypt -r $GPG_FINGERPRINT pw
 
 # Decrypt
 $ gpg --quiet --decrypt ~/.password-store/pw.gpg
+
+# Specifically to set all the paths directly
+$ gpg --homedir /path/to/.gnupg/ --quiet --decrypt /path/to/pass/folder/subfolder/password.gpg
+    #> You will be prompted for the relevant passcode
 ```
 
 And adds structure and tracking to the mix.
