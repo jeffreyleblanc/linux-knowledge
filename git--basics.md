@@ -15,6 +15,26 @@ $ git -C ~/code/my-proj git st
 $ git -C ~/code/my-other-proj git br -r
 ```
 
+### Testing a Rebase Pattern
+
+If you want to dry run rebasing `br1` off `master` for example:
+
+```sh
+$ git checkout br1
+$ git checkout -b tmp
+$ git rebase master
+#> see how it goes
+$ git checkout master
+$ git br -D tmp
+```
+
+Now you can:
+
+```sh
+$ git checkout br1
+$ git rebase master
+```
+
 
 ### More remotes
 
