@@ -1,5 +1,24 @@
 # SSH Agent
 
+**NOTE**: Lot's of missing info here
+
+## Forwarding Issues
+
+I've noticed that if you forward and into a remote and then join a tmux there:
+
+```sh
+l$ ssh -A myuser@myremote
+r$ tmux a -t mysess
+r$ echo SSH_AUTH_SOCK
+#> Old and stale
+```
+
+So you need to determine the new path to the socket, of form
+`/tmp/ssh--HASH--/agent--etc`, and `export SSH_AUTH_SOCK=the/path`
+
+Note that `SSH_AGENT_PID` is not set on the remote since there isn't
+a `ssh-agent` running there.
+
 
 ## Setup
 
