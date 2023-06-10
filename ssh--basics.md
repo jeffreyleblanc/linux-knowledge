@@ -2,6 +2,20 @@
 
 This page has basic info on using ssh.
 
+## Inbox
+
+Sometimes your `TERM` profile isn't on a remote machine (e.g. if you have tmux on yours).
+This results in weird backspace and tab behavior.
+
+You can force the remote to use a sensible TERM like so:
+
+```sh
+$ TERM=screen ssh user@server
+```
+
+More on `TERM`: <https://www.gnu.org/software/gettext/manual/html_node/The-TERM-variable.html>
+
+
 ## Super Basic
 
 In this scenario we have a *local* machine and a *server*.

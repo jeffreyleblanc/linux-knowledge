@@ -75,6 +75,9 @@ $ rg -N "^class"
 # Look for control characters like "Auth("
 $ rg "Auth\("
 
+# Use batcat
+$ rg -p TERM | batcat
+
 # Look for certain calls in a file
 $ rg -e 'P\.\w+\(' snackpack.py --trim -N -o | sort | uniq
 # P.b(
