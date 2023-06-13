@@ -110,12 +110,23 @@ Window Layout
 
 
 Workspaces
----------
+----------
 
     $M NUM                  Make or go to that workspace
     $M shift+$N             move window to workspace $N
     Ctrl+alt+arrow          move prev/next workspace
 
+Resize Mode
+-----------
+
+    Resize focus window
+
+    $M r            Enter resize mode
+                    A red "resize" will be present in main bar
+    Enter or        Exit resize mode
+    Esc
+    h,j,k,l or      Resize the window
+    arrows
 
 Overall
 -------
