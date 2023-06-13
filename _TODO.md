@@ -2,6 +2,20 @@
 
 There is always tons to do, but initial things to add/update:
 
+## Inbox
+
+Master List of big topics:
+
+* boot process
+* login, getty, tty, etc
+* file systems and mounting
+* kernel vs userspace
+* package management
+    * snaps
+    * flatpack
+    * deb, rpm, yum, etc...
+
+
 ## Strucure
 
 The goal is not have an overly complicated structure, but perhaps a pattern of:
