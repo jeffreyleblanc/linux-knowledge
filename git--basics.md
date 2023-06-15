@@ -35,6 +35,35 @@ $ git checkout br1
 $ git rebase master
 ```
 
+A few more notes on rebasing. If it has a merge conflict at some point you can:
+
+1. Abort the process with:
+
+`git rebase --abort`
+
+2. Fix the issues as they appear
+
+The output and `git status` will show you the files you need to fix.
+
+Within the files it looks like:
+
+```
+--snip--
+<<<<<< HEAD
+    from master branch in this case
+=========
+    from the commit of the branch being rebased
+>>>>>> commit
+--snip--
+```
+
+You can edit any of the issue files and the issues and then
+`git add <file>`
+
+Then you can `git rebase --continue`
+
+Although about merges, relevant info: <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>
+
 
 ### More remotes
 
