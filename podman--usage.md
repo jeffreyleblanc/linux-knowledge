@@ -95,6 +95,19 @@ See also <https://docs.podman.io/en/latest/markdown/podman-run.1.html>
 
 You want to configure podman to use overlays. Check on how to do and confirm this.
 
+So we may want something like:
+
+`~/.config/containers/storage.conf` has:
+
+```
+[storage]
+driver = "overlay"
+```
+
+But that file may want to be on a path within `~/.local/share/containers/`?
+Need to review podman paths.
+
+
 ### Overlay Error
 
 I was getting this issue <https://github.com/containers/podman/issues/5114>
