@@ -1,7 +1,10 @@
 # Bat Cat
 
-Cat with nice syntax highlights.
-It also pages by default.
+* `cat` with nice syntax highlights.
+* Pages by default via `less`.
+* When looking at a file in a git repo, will show diffs
+    * This seems to happen even if cwd is not in repo
+    * `-p` or `-n` suppress this
 
 ```sh
 $ sudo apt-get install bat
@@ -12,6 +15,13 @@ $ bat myfile.py
 # Get help
 $ bat -h
 $ bat --help
+
+# Print without line numbers or frame
+$ bat -p myfile
+# Print with line number but no frame
+$ bat -n myfile
+# Print all characters
+$ bat -A myfile
 
 # List all understood formats
 $ bat -L
