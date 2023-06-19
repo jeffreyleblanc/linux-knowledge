@@ -23,6 +23,10 @@ $ bat -n myfile
 # Print all characters
 $ bat -A myfile
 
+# View a list of matching files from fd
+# (May be other methods)
+$ bat $(fd TERM)
+
 # List all understood formats
 $ bat -L
 
