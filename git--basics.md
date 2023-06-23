@@ -274,7 +274,19 @@ git branch my-saved-work
 
 ## 2.5) Finding Common Commit for 2 branches
 
-`git merge-base master interaction_rendering`
+```sh
+$ git merge-base BRANCH1 BRANCH2
+```
+
+Note that the order of the branches shouldn't matter
+
+## 2.6) Finding Top Level Commit on a Branch
+
+```sh
+$ git log -1 BRANCHNAME
+# or
+$ git log -1 REMOTE/BRANCHNAME
+```
 
 
 ## 3) Git Searching Commit Log
