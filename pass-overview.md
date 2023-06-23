@@ -77,6 +77,16 @@ We can set the envar `PASSWORD_STORE_DIR` to point to a custom password-store di
 export PASSWORD_STORE_DIR=/home/myuser/Documents/_pass
 ```
 
+## Useful Patterns
+
+Make a `CLEAR` or `CLR` top level entry with something like "cleared" in it so you can always:
+
+```sh
+$ pass -c CLR
+```
+
+To immediately reset the clipboard
+
 
 ## Questions:
 
