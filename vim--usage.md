@@ -21,14 +21,15 @@ Vim uses modes to handle interaction. Some of the main modes are:
 
 1.2 Managing Mode
 
-    i           enter insert mode
+    i           enter insert mode at cursor
+    o           enter insert mode on a newline under cursor
     ctrl [      exit insert mode to command mode
     esc         exit insert mode to command mode
     shift V     enter line selection mode
     shift v     enter character selection mode
 
-2. Insert mode
---------------
+2. Within Insert mode
+---------------------
 
     ctrl o      will let you execute 1 command and then
                 go back to insert mode
