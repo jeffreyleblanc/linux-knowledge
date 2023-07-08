@@ -94,10 +94,20 @@ We should describe better how to get/manage remote branches and tags
 
 ### Clean Repo
 
-Clean of everything not tracked:
+Some patterns for cleaning up files in a repo that aren't tracked:
 
 ```sh
+# Clean everything not tracked:
 $ git clean -fxd
+
+# Dry run of above
+$ git clean -fxd -n
+
+# Keep files in .gitignore
+$ git clean -fd
+
+# Clean only a specific subpath
+$ git clean -fxd sub/path/
 ```
 
 ### Diff by file type
