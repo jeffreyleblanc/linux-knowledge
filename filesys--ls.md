@@ -21,5 +21,8 @@ $ ls -a .
 
 # List all files but exclude `.` and `..`
 $ ls -A .
+
+# List files with human readable size
+$ ls -lsh FILEPATH
 ```
 
