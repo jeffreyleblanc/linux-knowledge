@@ -11,6 +11,16 @@ $ sudo dmidecode
 $ sudo dmidecode | grep -A 8 "^System Information"
 ```
 
+How a machine is hosted and other info:
+
+```sh
+# Can help tell if this is a vm or container
+$ systemd-detect-virt
+
+# Has a bunch of functionality, but status is very useful
+# hostnamectl status
+```
+
 OS Version
 
 ```sh
@@ -43,4 +53,5 @@ $ lscpu -e
 # Output in json
 $ lscpu -J
 ```
+
 
