@@ -41,3 +41,14 @@ $ ping google.com
 $ pktmon
 ```
 
+More commands:
+
+```sh
+$ echo "hello" > test.txt
+# cd and ls work
+# mkdir and rmdir work
+```
+
+
+
+
