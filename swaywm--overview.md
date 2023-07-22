@@ -142,6 +142,9 @@ See also <https://i3wm.org/docs/refcard.html>
 
 * For a file browser use `nautilus`
     * To make multiple windows hit 'ctrl+n'
+* To open gnome control, which can be useful for system configurations
+    * `super d` and open `gnome-control-center`
+
 
 ## Questions
 
