@@ -12,6 +12,9 @@ $ ls -ld .?*
 
 # Quote entries and separate with commas
 $ ls -mQ .
+# Similar but one entry on a line, in a subdir
+# though not sure how to get ending commas:
+$ ls -1Q subdir/*
 
 # Recursively list directories in chunks
 $ ls -R .
