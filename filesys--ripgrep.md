@@ -82,13 +82,7 @@ $ rg -p TERM | batcat
 $ rg -e 'P\.\w+\(' snackpack.py --trim -N -o | sort | uniq
 # P.b(
 # P.c(
-# P.g(
-# P.header(
-# P.k(
-# P.p(
-# P.r(
-# P.rb(
-# P.rule(
+# --etc--
 
 $ rg -e '\bsso\b'
 $ rg -e 'thing\.other'
@@ -100,4 +94,11 @@ $ rg -e '[^_]function'
 
 $ rg -e '[g|G]uest'
 ```
+
+I had a set of text files where each had in it something like "10 minutes" that I wanted to total up:
+
+```sh
+$ rg -e "(\d+) minutes" -oIN -r '$1' --color never | paste -sd+ | bc
+```
+
 
