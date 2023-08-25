@@ -14,6 +14,7 @@ You probably want to turn off the countdown and flash:
     * Countdown: Off
     * Fireflash: Off
 
-It will store images at `~/Pictures/Webcam`
+To take a photo press `spacebar`.
 
+It will store images at `~/Pictures/Webcam`.
 
