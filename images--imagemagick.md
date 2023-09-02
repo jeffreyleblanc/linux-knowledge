@@ -6,6 +6,13 @@ To install:
 $ apt-get install imagemagick
 ```
 
+Some of the relevant commands:
+
+```sh
+$ identify -help
+$ convert -help
+```
+
 Useful links:
 
 * <https://imagemagick.org/script/command-line-tools.php>
