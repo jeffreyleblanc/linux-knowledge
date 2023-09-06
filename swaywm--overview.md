@@ -113,7 +113,8 @@ Workspaces
 ----------
 
     $M NUM                  Make or go to that workspace
-    $M shift+$N             move window to workspace $N
+    $M shift+$N             move focused window to workspace $N
+                            => note this will create that workspace if it doesn't exist
     Ctrl+alt+arrow          move prev/next workspace
 
 Resize Mode
