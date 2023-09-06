@@ -123,6 +123,7 @@ wm--  (for window manager, graphics?)
 * linux users and permisions
     * chown, chgrp, chmod
     * sudo and su patterns
+        * e.g. with the `-` in `su -` for example
 * process examination
     * top and htop
     * signal processes

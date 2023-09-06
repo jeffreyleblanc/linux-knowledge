@@ -35,6 +35,18 @@ $ nmcli radio wifi off
 $ nmcli radio wifi on
 ```
 
+## Other Notes
+
+Need to review, but I had a situation where the psk password wasn't saved on a connection.
+To get that to work I had to:
+
+```sh
+$ nmcli c up WIRELESS_NAME --ask
+```
+
+And then it would ask for the wifi password.
+
+
 ## Files
 
 The connection files are located under `/etc/NetworkManager/system-connections/`.
