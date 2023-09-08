@@ -1,5 +1,16 @@
 # More Tmux
 
+## Tmux.conf pickup
+
+Note that if you change `~/.tmux.conf` it won't be picked up until the server is cycled.
+
+
+## Commands
+
+* `ctrl+b/a :`
+* Then you get a prompt to enter a command
+
+
 ## Rearranging Windows
 
 You can change a windows number by:
