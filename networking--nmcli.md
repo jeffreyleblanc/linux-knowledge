@@ -35,6 +35,18 @@ $ nmcli radio wifi off
 $ nmcli radio wifi on
 ```
 
+## More Commands to Integrate
+
+```sh
+# Scan for wifi
+$ nmcli dev wifi
+
+# Connect to new wifi and manually enter pass
+$ nmcli dev wifi connect SSID --ask
+
+```
+
+
 ## Other Notes
 
 Need to review, but I had a situation where the psk password wasn't saved on a connection.
