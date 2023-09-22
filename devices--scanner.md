@@ -6,8 +6,14 @@ I've use the `simple-scan` program/package. Seems mostly ok.
 
 One thing I couldn't find configuration for was outputting grayscale images, but you can also use the following `imagemagick` cli if you need to:
 
-TBD
+```sh
+# Pure conversion
+$ convert <in.jpg> -colorspace Gray <out.jpg>
 
+# Alter brightness contrast where it is "{% change brightness}x{% change constrast}
+# http://www.imagemagick.org/script/command-line-options.php#brightness-contrast
+$ convert <in.jpg> -brightness-contrast 5x0 -colorspace Gray <out.jpg>
+```
 
 There is also `sane`, though I haven't tried it.
 
