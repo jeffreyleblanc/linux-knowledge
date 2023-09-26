@@ -65,6 +65,23 @@ Then you can `git rebase --continue`
 Although about merges, relevant info: <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>
 
 
+### Tags
+
+```sh
+# List tags
+$ git tag
+
+# Tag last commit with an annotated tag
+$ git tag -a v0.1.0 -m "Version 0.1.0"
+
+# Show a tag
+$ git show v0.1.0
+
+# Tag a specific commit (check)
+$ git tag -a v0.0.1 -m "Version 0.0.1" <TAG_HASH>
+```
+
+
 ### More remotes
 
 ```sh
