@@ -94,6 +94,34 @@ To add:
 * `alias`
 * common/core env
 
+
+## Listing Available Commands
+
+One way is via the builtin `compgen`:
+
+```sh
+# List all available commands
+$ compgen -c
+
+# List all aliases
+$ compgen -a
+
+# List all available functions
+$ compgen -A function
+
+# See all available commands/aliases starting with 'py'
+$ compgen -ac [py]
+```
+
+
+## More on Shell Builtins
+
+There are a large number of useful bash shell builtins. To explore start looking at:
+
+* <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html>
+* <https://manpages.ubuntu.com/manpages/xenial/en/man7/bash-builtins.7.html>
+
+
 ## Stdin and all that
 
 Understand the following as a jumping off point: <https://unix.stackexchange.com/questions/119648/redirecting-to-dev-null>
