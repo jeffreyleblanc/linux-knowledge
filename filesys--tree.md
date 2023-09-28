@@ -12,6 +12,9 @@ $ tree --charset=ascii
 # Print all files, including dot files
 $ tree -a
 
+# Same as above but ignore git
+$ tree -a -I .git
+
 # Print only directories
 $ tree -d
 
