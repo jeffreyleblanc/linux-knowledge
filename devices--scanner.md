@@ -15,6 +15,17 @@ $ convert <in.jpg> -colorspace Gray <out.jpg>
 $ convert <in.jpg> -brightness-contrast 5x0 -colorspace Gray <out.jpg>
 ```
 
+Specifically I'm using the following:
+
+```sh
+# For 8x5 yellow legal pad sheets
+$ convert scan.jpg -resize 75% -colorspace Gray -brightness-contrast 5x0 scan-1.jpg
+
+# For normal 8.5x11 paper with black ink
+$ convert scan.jpg -resize 60% -colorspace Gray scan-1.jpg
+```
+
+
 There is also `sane`, though I haven't tried it.
 
 * <http://www.sane-project.org/>
