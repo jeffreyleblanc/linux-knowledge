@@ -18,4 +18,6 @@ Others Include:
 
 * `pinta`
 * `inkscape` (full feature)
+* `krita` <https://krita.org/en/download/krita-desktop/>
+
 
