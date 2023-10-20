@@ -1,4 +1,16 @@
-# Monitor Power and Battery State
+# Power
+
+## Looking for Power Events
+
+If you want to check when a machine (a laptop for example), went to sleep or woke up:
+
+```sh
+# Filter
+$ sudo dmesg -T | grep suspend
+```
+
+
+## Monitor Power and Battery State
 
 ```sh
 # List power device paths (example below)
