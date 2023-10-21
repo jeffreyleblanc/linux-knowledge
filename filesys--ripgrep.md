@@ -69,6 +69,10 @@ Showing additional lines for each match
 ## More Examples
 
 ```sh
+# Look for dollar sign "$" and "$("
+$ rg -e "\\$"
+$ rg -e "\\$\("
+
 # Look for python main class definitions
 $ rg -N "^class"
 
