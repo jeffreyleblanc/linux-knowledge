@@ -45,6 +45,9 @@ $ rg -p TERM | less -R
 
 # Never print files
 $ rg -I TERM
+
+# Search for something (here markdown subheaders) and print just the unique results:
+$ rg -e "^## " -IN --color never | sort | uniq
 ```
 
 More useful flags:
