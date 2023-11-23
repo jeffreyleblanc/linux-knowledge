@@ -4,4 +4,4 @@
 
 * Make will only stop if embedded scripts `exit 1` or above
 * Make uses **tabs** not spaces
-
+* `$(CURDIR)` provides the working directory
