@@ -1,5 +1,18 @@
 # Working with PDF
 
+## Extracting PDF Sections
+
+```sh
+$ sudo apt-get install qpdf
+
+# Extract pages
+$ qpdf in.pdf --pages . 2-12 -- out.pdf
+
+# Extract pages, and also strip original file meta data
+$ qpdf --empty --pages in.pdf 2-12 -- out.pdf
+```
+
+
 ## Generating Truly Redacted Files
 
 This outlines a workflow to create redacted pdfs by outputting to images, then recombining them.
