@@ -13,6 +13,22 @@ $ ls -l my-deep-thing
 #> --snip--  my-deep-thing -> a/b/c/deep-thing/
 ```
 
+**NOTE**: Relative addressing of a symlink is from the symlink, so:
+
+```sh
+$ ls
+#> dist/
+#> media/
+#> ...
+
+$ ln -s media dist/media
+#> WILL NOT WORK
+
+$ ( cd dist && ln -s ../media media )
+#> Will work
+```
+
+
 ## Tracking Links
 
 Consider the following where we have a chain of symlinks:
