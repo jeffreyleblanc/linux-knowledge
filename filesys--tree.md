@@ -20,6 +20,9 @@ $ tree -d
 
 # Ignore a directory
 $ tree -I node_modules
+
+# Follow symlinks
+$ tree -l path
 ```
 
 Additional useful flags
